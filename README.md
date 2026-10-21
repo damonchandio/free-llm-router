@@ -1,5 +1,9 @@
 # free-llm-router
 
+![free-llm-router](.github/social-preview.png)
+
+[![tests](https://github.com/damonchandio/free-llm-router/actions/workflows/tests.yml/badge.svg)](https://github.com/damonchandio/free-llm-router/actions/workflows/tests.yml) ![licence](https://img.shields.io/badge/licence-MIT-16A6F0) ![runtime](https://img.shields.io/badge/python-3.10%2B-3776AB?logo=python&logoColor=white) [![stars](https://img.shields.io/github/stars/damonchandio/free-llm-router?style=social)](https://github.com/damonchandio/free-llm-router/stargazers)
+
 Run your agents on free LLM tiers without them falling over at the first rate limit, and without sending private data to free tiers that may train on it.
 
 Free tiers are generous but fragile. Groq gives you fast open models but a small per-minute token budget. Gemini's free tier writes well but allows only a handful of calls a day for its best model, and Google may use free-tier prompts to improve its products. A local model is always there but slower. `free-llm-router` puts the three behind one `ask()` call: it picks the right backend for each request, rests a backend that says "slow down" for exactly as long as it asked, and falls through to the next one instead of failing.
