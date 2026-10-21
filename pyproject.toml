@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "free-llm-router"
+version = "0.1.0"
+description = "Run agents on free LLM tiers (Groq, Gemini, Ollama) with rate-limit fallbacks and privacy routing"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Damon Chandio"}]
+requires-python = ">=3.9"
+dependencies = ["requests>=2.28"]
+keywords = ["llm", "groq", "gemini", "ollama", "free tier", "rate limit", "agents"]
+
+[project.urls]
+Homepage = "https://github.com/damonchandio/free-llm-router"
+
+[tool.setuptools]
+packages = ["free_llm_router"]
